@@ -64,3 +64,5 @@ build/
 
 # VS Resource Session
 *.aps
+
+!dist/in_msx.dll
