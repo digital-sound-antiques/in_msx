@@ -248,7 +248,7 @@ static BOOL CALLBACK dlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
      
       case ITEM_PATCH:
         for(i=TL;i<ENDPARAM;i++) ShowWindow(edit2413->hParam[i], SW_HIDE) ;
-        OPLL_patch2dump(&edit2413->patch[c],(e_uint8 *)dump) ;
+        OPLL_patch2dump(&edit2413->patch[c],(uint8_t *)dump) ;
         for(i=0;i<8;i++) sprintf(text+i*3, " %02X", (unsigned char)dump[i]) ;
         SetWindowText(GetDlgItem(hDlg, IDC_TONEINFO), text) ;
         break ;
@@ -449,7 +449,7 @@ void EDIT2413_save(EDIT2413 *edit2413, char *filename)
   int i ;
 
   for(i=1;i<19;i++)
-    OPLL_patch2dump(&edit2413->patch[i*2], (e_uint8 *)illdata + 16*i) ;
+    OPLL_patch2dump(&edit2413->patch[i*2], (uint8_t *)illdata + 16*i) ;
 
   if((fp=fopen(filename,"wb"))==NULL) return ;
   fwrite(illdata, sizeof(char), 16*19, fp) ;
@@ -467,5 +467,5 @@ void EDIT2413_load(EDIT2413 *edit2413, char *filename)
   fclose(fp) ;
 
   for(i=1;i<19;i++)
-    OPLL_dump2patch((e_uint8 *)illdata + 16*i, &edit2413->patch[i*2]) ;
+    OPLL_dump2patch((uint8_t *)illdata + 16*i, &edit2413->patch[i*2]) ;
 }
