@@ -1,0 +1,1618 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// ニュートラル resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_YM2413              BITMAP                  "ym2413.bmp"
+IDB_ASCII               BITMAP                  "ascii.bmp"
+#endif    // ニュートラル resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 日本語 resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_JPN)
+#ifdef _WIN32
+LANGUAGE LANG_JAPANESE, SUBLANG_DEFAULT
+#pragma code_page(932)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CFG_PAGE1 DIALOG  0, 0, 140, 127
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "ファイル種別"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CONTROL         "KSS (*.KSS)",IDC_ENABLE_KSS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,8,88,10
+    CONTROL         "MGSDRV (*.MGS)",IDC_ENABLE_MGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,24,88,10
+    CONTROL         "MuSICA, KINROU5 (*.BGM, *.BGR)",IDC_ENABLE_BGM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,40,132,10
+    CONTROL         "MPK (*.MPK)",IDC_ENABLE_MPK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,56,88,10
+    CONTROL         "OPLLDriver (*.OPX)",IDC_ENABLE_OPX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,72,104,10
+    CONTROL         "MoonSound (*.MBM)",IDC_ENABLE_MBM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,88,104,10
+END
+
+IDD_CFG_PAGE2 DIALOGEX 0, 0, 211, 159
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "演奏設定"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    CONTROL         "96000Hz",IDC_RADIO96K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,12,20,44,11
+    CONTROL         "48000Hz",IDC_RADIO48K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,56,20,43,11
+    CONTROL         "44100Hz",IDC_RADIO44K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,20,44,11
+    CONTROL         "32000Hz",IDC_RADIO32K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,12,37,43,11
+    CONTROL         "22050Hz",IDC_RADIO22K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,56,37,43,11
+    CONTROL         "11025Hz",IDC_RADIO11K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,37,44,11
+    CONTROL         "Auto",IDC_STEREO_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,165,15,31,10
+    CONTROL         "Off",IDC_STEREO_OFF,"Button",BS_AUTORADIOBUTTON,165,30,
+                    25,10
+    CONTROL         "On",IDC_STEREO_ON,"Button",BS_AUTORADIOBUTTON,165,44,25,
+                    10
+    CONTROL         "Auto",IDC_CLK_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,12,78,28,10
+    CONTROL         "x1",IDC_CLK_SLOW,"Button",BS_AUTORADIOBUTTON,42,78,18,
+                    10
+    CONTROL         "x2",IDC_CLK_FAST,"Button",BS_AUTORADIOBUTTON,66,78,18,
+                    10
+    EDITTEXT        IDC_BUFFER,165,75,30,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "PSGとSN76489を実クロック(0.22MHz)で駆動",IDC_PSG_HQ,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,10,113,140,10
+    CONTROL         "SCCを実クロック(1.79MHz)で駆動",IDC_SCC_HQ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,125,110,10
+    CONTROL         "OPLLを実クロック(49716Hz)で駆動",IDC_OPLL_HQ,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,10,138,115,10
+    GROUPBOX        "再生周波数",IDC_STATIC,5,5,145,55,WS_GROUP | WS_TABSTOP
+    GROUPBOX        "CPU速度",IDC_STATIC,5,65,145,30
+    GROUPBOX        "バッファサイズ",IDC_STATIC,154,65,50,30
+    GROUPBOX        "再生品質",IDC_STATIC,4,100,200,55
+    GROUPBOX        "ステレオ",IDC_STATIC,154,5,50,55
+    CONTROL         "x4",IDC_CLK_FASTER,"Button",BS_AUTORADIOBUTTON,90,78,18,
+                    10
+    CONTROL         "x8",IDC_CLK_FASTEST,"Button",BS_AUTORADIOBUTTON,114,78,
+                    18,10
+END
+
+IDD_CFG_PAGE3 DIALOGEX 0, 0, 203, 155
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "デバイス"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    CONTROL         "自動",IDC_PSG_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,15,29,10
+    CONTROL         "AY-3-8910",IDC_PSG_AY,"Button",BS_AUTORADIOBUTTON,54,15,
+                    48,10
+    CONTROL         "YM2149",IDC_PSG_YM,"Button",BS_AUTORADIOBUTTON,107,15,
+                    35,10
+    CONTROL         "自動",IDC_SCC_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,54,28,10
+    CONTROL         "Standard",IDC_SCC_NORMAL,"Button",BS_AUTORADIOBUTTON,54,
+                    54,43,10
+    CONTROL         "Enhanced",IDC_SCC_PLUS,"Button",BS_AUTORADIOBUTTON,107,
+                    54,41,10
+    CONTROL         "YM2413",IDC_OPLL_2413,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,88,35,11
+    CONTROL         "VRC7",IDC_OPLL_VRC7,"Button",BS_AUTORADIOBUTTON,55,87,
+                    29,11
+    CONTROL         "YMF281B",IDC_OPLL_281B,"Button",BS_AUTORADIOBUTTON,107,
+                    87,39,11
+    CONTROL         "OPLLをステレオ化する(&U)",IDC_OPLL_STEREO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,127,84,11
+    PUSHBUTTON      "パン設定(&P)",IDC_PANEDIT,150,124,41,15
+    GROUPBOX        "PSG",IDC_STATIC,4,4,194,31
+    GROUPBOX        "SCC",IDC_STATIC,5,40,193,31
+    GROUPBOX        "OPLL",IDC_STATIC,5,74,193,31
+    GROUPBOX        "おまけ",IDC_STATIC,5,113,193,31
+END
+
+IDD_CFG_PAGE4 DIALOGEX 0, 0, 215, 141
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "ドライバ"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    PUSHBUTTON      "&MGSDRV",IDC_SET_MGSDRV,5,11,50,12
+    PUSHBUTTON      "K&INROU5",IDC_SET_KINROU,5,27,50,12
+    PUSHBUTTON      "M&PK(V1.06)",IDC_SET_MPK106,5,45,50,12
+    PUSHBUTTON      "MP&K(V1.03)",IDC_SET_MPK103,5,64,50,12
+    PUSHBUTTON      "&OPX4KSS",IDC_SET_OPXDRV,5,83,50,12
+    PUSHBUTTON      "&FMPAC.ROM",IDC_SET_FMBIOS,5,102,50,12
+    PUSHBUTTON      "Moon&Blaster",IDC_SET_MBMDRV,5,121,50,12
+    EDITTEXT        IDC_MGSDRV_PATH,58,11,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_KINROU_PATH,58,27,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_MPK106_PATH,58,45,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_MPK103_PATH,58,64,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    EDITTEXT        IDC_OPXDRV_PATH,58,83,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_FMBIOS_PATH,58,102,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+    EDITTEXT        IDC_MBMDRV_PATH,58,121,152,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER,WS_EX_STATICEDGE
+END
+
+IDD_CFG_PAGE5 DIALOG  0, 0, 237, 198
+STYLE DS_SETFONT | WS_CHILD | WS_CAPTION
+CAPTION "ミキサー"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    CTEXT           "マスター",IDC_STATIC,15,10,30,10,SS_CENTERIMAGE
+    CONTROL         "Slider1",IDC_MASTERVOL,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | TBS_ENABLESELRANGE | 
+                    WS_TABSTOP,15,20,30,105
+    CTEXT           "-48.0dB",IDC_MASTERDB,15,130,30,10,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,60,5,170,150
+    CTEXT           "PSG",IDC_STATIC,69,10,30,10,SS_CENTERIMAGE
+    CONTROL         "Slider1",IDC_PSG_PAN,"msctls_trackbar32",WS_TABSTOP,68,
+                    25,30,21
+    CONTROL         "Slider1",IDC_PSGVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,70,44,30,70
+    CTEXT           "-48.0dB",IDC_PSGDB,70,119,30,10,SS_CENTERIMAGE
+    CONTROL         "Mute",IDC_PSGMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,70,134,30,10
+    CTEXT           "SCC",IDC_STATIC,109,10,30,10,SS_CENTERIMAGE
+    CONTROL         "Slider1",IDC_SCC_PAN,"msctls_trackbar32",WS_TABSTOP,108,
+                    25,30,21
+    CONTROL         "Slider1",IDC_SCCVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,110,44,30,70
+    CTEXT           "-48.0dB",IDC_SCCDB,110,119,30,10,SS_CENTERIMAGE
+    CONTROL         "Mute",IDC_SCCMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,110,134,30,10
+    CTEXT           "OPLL",IDC_STATIC,149,10,30,10,SS_CENTERIMAGE
+    CONTROL         "Slider1",IDC_OPLL_PAN,"msctls_trackbar32",WS_TABSTOP,
+                    148,25,30,21
+    CONTROL         "Slider1",IDC_OPLLVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,150,44,30,70
+    CTEXT           "-48.0dB",IDC_OPLLDB,150,119,30,10,SS_CENTERIMAGE
+    CONTROL         "Mute",IDC_OPLLMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,150,134,30,10
+    CTEXT           "OPL",IDC_STATIC,189,10,30,10,SS_CENTERIMAGE
+    CONTROL         "Slider1",IDC_OPL_PAN,"msctls_trackbar32",WS_TABSTOP,188,
+                    25,30,21
+    CONTROL         "Slider1",IDC_OPLVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,190,44,30,70
+    CTEXT           "-48.0dB",IDC_OPLDB,190,119,30,10,SS_CENTERIMAGE
+    CONTROL         "Mute",IDC_OPLMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,190,134,30,10
+    CONTROL         "PLSやKSSの音量設定を無視する(&P)",IDC_OVERWRITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,160,115,15
+    CONTROL         "ミキサー設定を自動的に保存する(&M)",IDC_AUTO_SAVE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,15,175,120,15
+    PUSHBUTTON      "保存(&S)",IDC_SAVE,185,160,40,15
+    PUSHBUTTON      "リセット(&R)",IDC_RESTORE,185,175,40,15
+END
+
+IDD_CFG_PAGE6 DIALOGEX 0, 0, 203, 123
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "シーケンサ"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "演奏設定",IDC_STATIC,6,6,192,48
+    LTEXT           "演奏時間(&P)",IDC_STATIC,12,20,45,8
+    EDITTEXT        IDC_PLAYTIME,60,18,32,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "フェード時間(&F)",IDC_STATIC,12,39,51,8
+    EDITTEXT        IDC_FADETIME,60,36,32,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "ループ回数(&L)",IDC_STATIC,108,20,42,8
+    EDITTEXT        IDC_LOOPNUM,156,18,18,12,ES_RIGHT | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_LOOPSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,174,18,6,12
+    CONTROL         "無音検出(&S)",IDC_SILENT_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,97,37,53,11
+    EDITTEXT        IDC_SILENT,156,36,18,12,ES_RIGHT | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "",IDC_SILENTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,174,36,6,12
+    LTEXT           "秒",IDC_STATIC,185,39,8,8
+    GROUPBOX        "演奏時間検出",IDC_STATIC,6,58,192,30
+    CONTROL         "無効",IDC_TDMODE0,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,12,70,38,13
+    CONTROL         "演奏後",IDC_TDMODE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,48,70,36,13
+    CONTROL         "演奏前",IDC_TDMODE2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,91,71,36,12
+    CONTROL         "時間検出のみ",IDC_TDMODE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,131,72,54,10
+    GROUPBOX        "演奏検出精度",IDC_STATIC,6,94,192,28
+    CONTROL         "標準",IDC_TDLEVEL0,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,12,105,35,14
+    CONTROL         "完全",IDC_TDLEVEL1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,48,105,35,13
+END
+
+IDD_CFG_PAGE7 DIALOG  0, 0, 214, 135
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "フィルタ"
+FONT 9, "ＭＳ Ｐゴシック"
+BEGIN
+    COMBOBOX        IDC_PSG_CUTOFF,140,21,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_SCC_CUTOFF,140,42,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_OPLL_CUTOFF,140,63,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_OPL_CUTOFF,140,84,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Hz",IDC_STATIC,186,24,9,8
+    LTEXT           "Hz",IDC_STATIC,186,45,9,8
+    LTEXT           "Hz",IDC_STATIC,186,66,9,8
+    LTEXT           "Hz",IDC_STATIC,186,87,9,8
+    LTEXT           "&R",IDC_STATIC,25,58,8,8
+    EDITTEXT        IDC_R,35,55,27,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "&C",IDC_STATIC,25,77,8,8
+    EDITTEXT        IDC_C,35,74,27,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Ω",IDC_STATIC,67,58,8,8
+    LTEXT           "nF",IDC_STATIC,67,77,12,8
+    LTEXT           "アナログフィルタの設定は全てのデバイスに影響します",
+                    IDC_STATIC,15,100,85,20
+    CONTROL         "DCフィルタ有効(&D)",IDC_ENABLE_DCF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,20,70,10
+    CONTROL         "RCフィルタ有効(&U)",IDC_ENABLE_RCF,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,38,70,10
+    GROUPBOX        "アナログフィルタ(&A)",IDC_STATIC,5,5,100,120
+    LTEXT           "&PSG",IDC_STATIC,120,24,14,8
+    LTEXT           "&SCC",IDC_STATIC,120,45,14,8
+    LTEXT           "&OPLL",IDC_STATIC,120,66,16,8
+    LTEXT           "OP&L",IDC_STATIC,120,87,13,8
+    GROUPBOX        "デジタルFIR ローパス(&F)",IDC_STATIC,110,5,95,120
+END
+
+IDD_ABOUT DIALOGEX 0, 0, 195, 169
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "情報"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    LTEXT           "スタティック",IDC_COPYRIGHT,7,7,181,88
+END
+
+IDD_CFG_PAGE8 DIALOGEX 0, 0, 235, 165
+STYLE DS_SETFONT | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "その他"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    GROUPBOX        "MoonBlasterの設定",IDC_STATIC,5,5,225,125
+    LTEXT           "使用するデバイス",IDC_STATIC,15,21,53,8
+    CONTROL         "MSX-&AUDIO",IDC_MBM_MODE0,"Button",BS_AUTORADIOBUTTON,
+                    80,20,46,10
+    CONTROL         "MSX-&MUSIC",IDC_MBM_MODE1,"Button",BS_AUTORADIOBUTTON,
+                    131,20,50,10
+    CONTROL         "両方(&B)",IDC_MBM_MODE2,"Button",BS_AUTORADIOBUTTON,186,
+                    20,35,10
+    LTEXT           "疑似ステレオ",IDC_STATIC,15,37,39,8
+    CONTROL         "有効にする(&S)",IDC_ENABLE_STEREO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,81,36,57,10
+    LTEXT           "演奏同期",IDC_STATIC,15,53,28,8
+    CONTROL         "&PAL(50Hz)",IDC_SYNC0,"Button",BS_AUTORADIOBUTTON,80,52,
+                    47,10
+    CONTROL         "&NTSC(60Hz)",IDC_SYNC1,"Button",BS_AUTORADIOBUTTON,131,
+                    52,52,10
+    EDITTEXT        IDC_MBKPATH,81,67,140,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "MBK検索パス(&M)...",IDC_MBKBTN,15,67,60,14
+    EDITTEXT        IDC_MBKDUMMY,81,85,49,14,ES_AUTOHSCROLL
+    LTEXT           "既定のMBKファイル",IDC_STATIC,15,90,59,8
+    LTEXT           "既定のMBKファイルは、MBKファイルが存在しないとき、MBMファイルが存在するフォルダからに自動的に読み込まれます。",
+                    IDC_STATIC,15,105,210,20
+    GROUPBOX        "KSS再生オプション",IDC_STATIC,6,132,222,30
+    CONTROL         "KSS内蔵プレイリストを展開する",IDC_EXPAND_INFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,13,145,107,10
+END
+
+IDD_KSSDLG DIALOGEX 32, 32, 191, 173
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "ファイル情報"
+MENU IDR_MENU1
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x0
+BEGIN
+    LTEXT           "ファイル",IDC_STATIC,11,17,26,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_FILENAME,37,17,143,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    LTEXT           "種類",IDC_STATIC,11,33,16,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TYPE,37,33,44,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    LTEXT           "ID",IDC_STATIC,84,33,8,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ID,92,33,32,12,ES_CENTER | ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_BORDER
+    LTEXT           "タイトル",IDC_STATIC,11,49,26,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TITLE,37,49,137,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER
+    EDITTEXT        IDC_EXTRA,11,87,169,24,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY | ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL,
+                    WS_EX_STATICEDGE
+    CONTROL         "演奏中の曲を追尾する",IDC_SYNC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,6,156,90,10
+    GROUPBOX        "ヘッダ情報",IDC_STATIC,5,3,181,66
+    GROUPBOX        "その他の情報",IDC_STATIC,5,75,181,42
+    GROUPBOX        "Song",IDC_STATIC,5,122,181,29
+    CONTROL         "",IDC_SLIDER,"msctls_trackbar32",TBS_NOTICKS | 
+                    WS_TABSTOP,31,133,125,13
+    RTEXT           "スタティック",IDC_SONG,11,134,15,9
+    PUSHBUTTON      "<",IDC_PREV,156,132,10,13
+    PUSHBUTTON      ">",IDC_NEXT,166,132,10,13
+END
+
+IDD_OPTDLG DIALOGEX 0, 0, 115, 17
+STYLE DS_SETFONT | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_TOOLWINDOW
+CAPTION "MGSDRV @m Data Browser"
+FONT 9, "ＭＳ Ｐゴシック", 0, 0, 0x1
+BEGIN
+END
+
+IDD_MASKDLG DIALOGEX 0, 0, 256, 138
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Channel Mask"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,210,120,39,14
+    CONTROL         "CH1",IDC_PSG1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    12,29,10
+    CONTROL         "CH2",IDC_PSG2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    24,29,10
+    CONTROL         "CH3",IDC_PSG3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    36,29,10
+    CONTROL         "CH1",IDC_SCC1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    72,29,10
+    CONTROL         "CH2",IDC_SCC2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    84,29,10
+    CONTROL         "CH3",IDC_SCC3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,12,
+                    96,29,10
+    CONTROL         "CH4",IDC_SCC4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,48,
+                    72,29,10
+    CONTROL         "CH5",IDC_SCC5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,48,
+                    84,29,10
+    CONTROL         "CH1",IDC_OPLL1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    12,29,10
+    CONTROL         "CH2",IDC_OPLL2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    24,29,10
+    CONTROL         "CH3",IDC_OPLL3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    36,29,10
+    CONTROL         "CH4",IDC_OPLL4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    126,12,29,10
+    CONTROL         "CH5",IDC_OPLL5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    126,24,29,10
+    CONTROL         "CH6",IDC_OPLL6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    126,36,29,10
+    CONTROL         "CH7",IDC_OPLL7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    156,12,29,10
+    CONTROL         "CH8",IDC_OPLL8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    156,24,29,10
+    CONTROL         "CH9",IDC_OPLL9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    156,36,29,10
+    GROUPBOX        "PSG",IDC_STATIC,6,0,78,54
+    GROUPBOX        "SCC",IDC_STATIC,6,60,78,54
+    GROUPBOX        "OPLL",IDC_STATIC,90,0,162,54
+    CONTROL         "BD",IDC_OPLL_BD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    186,12,25,10
+    CONTROL         "HH",IDC_OPLL_HH,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    186,24,25,10
+    CONTROL         "SD",IDC_OPLL_SD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    186,36,25,10
+    CONTROL         "TOM",IDC_OPLL_TOM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    216,12,27,10
+    CONTROL         "CYM",IDC_OPLL_CYM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    216,24,30,10
+    GROUPBOX        "OPL",IDC_STATIC,90,60,162,54
+    CONTROL         "CH1",IDC_OPL1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    72,29,10
+    CONTROL         "CH2",IDC_OPL2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    84,29,10
+    CONTROL         "CH3",IDC_OPL3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,96,
+                    96,29,10
+    CONTROL         "CH4",IDC_OPL4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    72,29,10
+    CONTROL         "CH5",IDC_OPL5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    84,29,10
+    CONTROL         "CH6",IDC_OPL6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,126,
+                    96,29,10
+    CONTROL         "CH7",IDC_OPL7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,
+                    72,29,10
+    CONTROL         "CH8",IDC_OPL8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,
+                    84,29,10
+    CONTROL         "CH9",IDC_OPL9,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,156,
+                    96,29,10
+    CONTROL         "BD",IDC_OPL_BD,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,186,72,25,10
+    CONTROL         "HH",IDC_OPL_HH,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,186,84,25,10
+    CONTROL         "SD",IDC_OPL_SD,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,186,96,25,10
+    CONTROL         "TOM",IDC_OPL_TOM,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,216,72,30,10
+    CONTROL         "CYM",IDC_OPL_CYM,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,216,84,30,10
+    CONTROL         "PCM",IDC_OPL_PCM,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    216,96,30,10
+    CONTROL         "D/A",IDC_DA,"Button",BS_AUTOCHECKBOX | WS_DISABLED | 
+                    WS_TABSTOP,48,12,28,10
+    CONTROL         "PCM",IDC_OPLL_PCM,"Button",BS_AUTOCHECKBOX | 
+                    WS_DISABLED | WS_TABSTOP,216,36,30,10
+    PUSHBUTTON      "&Reverse",IDC_REVERSE,48,120,39,14
+    PUSHBUTTON      "&Initialize",IDC_INIT,6,120,41,14
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_CFG_PAGE1, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_CFG_PAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 204
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_CFG_PAGE3, DIALOG
+    BEGIN
+        RIGHTMARGIN, 202
+        BOTTOMMARGIN, 151
+    END
+
+    IDD_CFG_PAGE4, DIALOG
+    BEGIN
+        RIGHTMARGIN, 200
+    END
+
+    IDD_CFG_PAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 232
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 186
+    END
+
+    IDD_CFG_PAGE6, DIALOG
+    BEGIN
+        RIGHTMARGIN, 182
+        BOTTOMMARGIN, 115
+    END
+
+    IDD_CFG_PAGE7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 207
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 188
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 162
+    END
+
+    IDD_CFG_PAGE8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_KSSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 185
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 166
+    END
+
+    IDD_OPTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 108
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 10
+    END
+
+    IDD_MASKDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 249
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CFG_PAGE7 DLGINIT
+BEGIN
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    0
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_NEXT                ICON                    "next.ico"
+IDI_STOP                ICON                    "stop.ico"
+IDI_PLAY                ICON                    "play.ico"
+IDI_PREV                ICON                    "prev.ico"
+IDI_MSXPLUG             ICON                    "msxplug.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "表示(&V)"
+    BEGIN
+        MENUITEM "チャンネルマスク(&M)",        IDM_MASK
+        MENUITEM "音色エディタ(&T)",            IDM_VEDIT
+        MENUITEM "MGS歌詞ウィンドウ(&L)",       IDM_OPTDLG
+        MENUITEM "詳細設定(&C)",                IDM_CONFIG
+    END
+END
+
+IDR_EXTRA MENU 
+BEGIN
+    MENUITEM "チャンネルマスク(&M)",        4650
+    MENUITEM "詳細設定(&S)",                4649
+END
+
+#endif    // 日本語 resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英語 (米国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 234, 165
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "スタティック",IDC_COPYRIGHT,7,7,211,81
+END
+
+IDD_CFG_PAGE1 DIALOGEX 0, 0, 140, 127
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "FileType"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "KSS (*.KSS)",IDC_ENABLE_KSS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,8,88,10
+    CONTROL         "MGSDRV (*.MGS)",IDC_ENABLE_MGS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,24,88,10
+    CONTROL         "MuSICA, KINROU5 (*.BGM, *.BGR)",IDC_ENABLE_BGM,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,40,132,10
+    CONTROL         "MPK (*.MPK)",IDC_ENABLE_MPK,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,56,88,10
+    CONTROL         "OPLLDriver (*.OPX)",IDC_ENABLE_OPX,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,8,72,104,10
+    CONTROL         "MoonSound (*.MBM)",IDC_ENABLE_MBM,"Button",
+                    BS_AUTOCHECKBOX | NOT WS_VISIBLE | WS_DISABLED | 
+                    WS_TABSTOP,8,88,104,10
+END
+
+IDD_CFG_PAGE2 DIALOGEX 0, 0, 212, 168
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Performance"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "96000Hz",IDC_RADIO96K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,12,20,44,11
+    CONTROL         "48000Hz",IDC_RADIO48K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,55,20,43,11
+    CONTROL         "44100Hz",IDC_RADIO44K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,20,44,11
+    CONTROL         "32000Hz",IDC_RADIO32K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,12,37,43,11
+    CONTROL         "22050Hz",IDC_RADIO22K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,56,37,43,11
+    CONTROL         "11025Hz",IDC_RADIO11K,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,100,37,44,11
+    CONTROL         "Auto",IDC_STEREO_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,165,15,31,10
+    CONTROL         "Off",IDC_STEREO_OFF,"Button",BS_AUTORADIOBUTTON,165,30,
+                    25,10
+    CONTROL         "On",IDC_STEREO_ON,"Button",BS_AUTORADIOBUTTON,165,44,25,
+                    10
+    EDITTEXT        IDC_BUFFER,165,75,30,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Synthesize PSG/SN76489 at real clock (0.22MHz)",
+                    IDC_PSG_HQ,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,110,
+                    184,10
+    CONTROL         "Synthesize SCC at real clock (1.79MHz)",IDC_SCC_HQ,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,124,140,10
+    CONTROL         "Synthesize OPLL at real clock (49716Hz)",IDC_OPLL_HQ,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,140,145,10
+    GROUPBOX        "Sample Rate",IDC_STATIC,5,5,145,55,WS_GROUP | 
+                    WS_TABSTOP
+    GROUPBOX        "CPU emulation speed",IDC_STATIC,5,65,145,30
+    GROUPBOX        "Buffer",IDC_STATIC,155,65,50,30
+    GROUPBOX        "Quality",IDC_STATIC,5,100,200,55
+    GROUPBOX        "Stereo",IDC_STATIC,155,5,50,55
+    CONTROL         "Auto",IDC_CLK_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,12,78,30,9
+    CONTROL         "x1",IDC_CLK_SLOW,"Button",BS_AUTORADIOBUTTON,42,78,21,9
+    CONTROL         "x2",IDC_CLK_FAST,"Button",BS_AUTORADIOBUTTON,66,78,21,9
+    CONTROL         "x4",IDC_CLK_FASTER,"Button",BS_AUTORADIOBUTTON,90,78,21,
+                    9
+    CONTROL         "x8",IDC_CLK_FASTEST,"Button",BS_AUTORADIOBUTTON,114,78,
+                    21,9
+END
+
+IDD_CFG_PAGE3 DIALOGEX 0, 0, 214, 149
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Device"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "Auto",IDC_PSG_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,17,36,10
+    CONTROL         "AY-3-8910",IDC_PSG_AY,"Button",BS_AUTORADIOBUTTON,57,17,
+                    48,10
+    CONTROL         "YM2149",IDC_PSG_YM,"Button",BS_AUTORADIOBUTTON,113,17,
+                    41,10
+    CONTROL         "Auto",IDC_SCC_AUTO,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,50,28,10
+    CONTROL         "Standard",IDC_SCC_NORMAL,"Button",BS_AUTORADIOBUTTON,57,
+                    50,45,10
+    CONTROL         "Enhanced",IDC_SCC_PLUS,"Button",BS_AUTORADIOBUTTON,113,
+                    50,44,10
+    CONTROL         "YM2413",IDC_OPLL_2413,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP,14,83,41,10
+    CONTROL         "VRC7",IDC_OPLL_VRC7,"Button",BS_AUTORADIOBUTTON,57,83,
+                    33,10
+    CONTROL         "YMF281B",IDC_OPLL_281B,"Button",BS_AUTORADIOBUTTON,113,
+                    83,45,10
+    CONTROL         "&Use OPLL stereo",IDC_OPLL_STEREO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,14,119,88,10
+    PUSHBUTTON      "&Pan...",IDC_PANEDIT,120,116,29,14
+    GROUPBOX        "PSG",IDC_STATIC,6,4,200,31
+    GROUPBOX        "SCC",IDC_STATIC,5,38,199,27
+    GROUPBOX        "OPLL",IDC_STATIC,5,70,199,30
+    GROUPBOX        "Special",IDC_STATIC,5,106,199,30
+END
+
+IDD_CFG_PAGE5 DIALOGEX 0, 0, 238, 180
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "Mixer"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "Slider1",IDC_MASTERVOL,"msctls_trackbar32",
+                    TBS_AUTOTICKS | TBS_VERT | TBS_BOTH | TBS_ENABLESELRANGE | 
+                    WS_TABSTOP,12,22,30,105
+    CONTROL         "Slider1",IDC_PSG_PAN,"msctls_trackbar32",WS_TABSTOP,65,
+                    26,30,21
+    CONTROL         "Slider1",IDC_SCC_PAN,"msctls_trackbar32",WS_TABSTOP,105,
+                    26,30,21
+    CONTROL         "Slider1",IDC_OPLL_PAN,"msctls_trackbar32",WS_TABSTOP,
+                    145,26,30,21
+    CONTROL         "Slider1",IDC_OPL_PAN,"msctls_trackbar32",WS_TABSTOP,185,
+                    26,30,21
+    CONTROL         "Slider1",IDC_PSGVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,67,46,30,70
+    CONTROL         "Slider1",IDC_SCCVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,107,46,30,70
+    CONTROL         "Slider1",IDC_OPLLVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,147,46,30,70
+    CONTROL         "Slider1",IDC_OPLVOL,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    TBS_VERT | TBS_BOTH | WS_TABSTOP,187,46,30,70
+    CONTROL         "Mute",IDC_PSGMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,67,135,30,10
+    CONTROL         "Mute",IDC_SCCMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,107,135,30,10
+    CONTROL         "Mute",IDC_OPLLMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,147,135,30,10
+    CONTROL         "Mute",IDC_OPLMUTE,"Button",BS_AUTOCHECKBOX | 
+                    BS_PUSHLIKE | WS_TABSTOP,187,135,30,10
+    CONTROL         "&Ignore PLS/KSS volume",IDC_OVERWRITE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,15,158,90,15
+    CONTROL         "&Auto Save",IDC_AUTO_SAVE,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,109,158,45,15
+    PUSHBUTTON      "&Save",IDC_SAVE,171,158,25,15
+    PUSHBUTTON      "&Reset",IDC_RESTORE,197,158,25,15
+    CTEXT           "-48.0dB",IDC_PSGDB,67,120,30,10,SS_CENTERIMAGE
+    CTEXT           "-48.0dB",IDC_SCCDB,107,120,30,10,SS_CENTERIMAGE
+    CTEXT           "-48.0dB",IDC_OPLLDB,147,120,30,10,SS_CENTERIMAGE
+    CTEXT           "-48.0dB",IDC_OPLDB,187,120,30,10,SS_CENTERIMAGE
+    CTEXT           "PSG",IDC_STATIC,67,11,30,10,SS_CENTERIMAGE
+    CTEXT           "OPLL",IDC_STATIC,147,11,30,10,SS_CENTERIMAGE
+    CTEXT           "OPL",IDC_STATIC,187,11,30,10,SS_CENTERIMAGE
+    CTEXT           "SCC",IDC_STATIC,107,11,30,10,SS_CENTERIMAGE
+    CTEXT           "-48.0dB",IDC_MASTERDB,12,131,30,10,SS_CENTERIMAGE
+    CTEXT           "Master",IDC_STATIC,12,11,30,10,SS_CENTERIMAGE
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDFRAME,57,6,170,145
+END
+
+IDD_PLSDLG DIALOGEX 16, 16, 246, 182
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_CAPTION | WS_SYSMENU
+CAPTION "Playlist Editor"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "No.",IDC_STATIC,12,8,10,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_POS,28,8,16,12,ES_RIGHT | ES_READONLY | ES_NUMBER
+    PUSHBUTTON      "<< &Prev",IDC_PREV,48,4,16,16,BS_ICON
+    PUSHBUTTON      "P&lay",IDC_PLAY,64,4,16,16,BS_ICON
+    PUSHBUTTON      "Stop",IDC_STOP,80,4,16,16,BS_ICON
+    PUSHBUTTON      "&Next >>",IDC_NEXT,96,4,16,16,BS_ICON
+    CONTROL         "Auto Jump",IDC_SYNC,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,120,8,48,10
+    ICON            IDI_MSXPLUG,IDC_LOGO,184,8,20,20
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,0,24,246,1
+    RTEXT           "Title",IDC_STATIC,4,32,20,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_TITLE,28,32,204,12,ES_AUTOHSCROLL
+    RTEXT           "File",IDC_STATIC,8,48,16,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_FILENAME,28,48,160,12,ES_AUTOHSCROLL | ES_READONLY
+    RTEXT           "Song",IDC_STATIC,188,48,19,12,SS_CENTERIMAGE
+    EDITTEXT        IDC_SONG,208,48,16,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin6",IDC_SONGSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,224,48,9,12
+    GROUPBOX        "Volume",IDC_STATIC,8,64,92,84
+    CONTROL         "PSG",IDC_PSGCHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,76,28,12
+    RTEXT           "",IDC_PSGDB,52,76,28,12,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_PSGSPIN,"msctls_updown32",UDS_ARROWKEYS,80,
+                    76,9,12
+    CONTROL         "SCC",IDC_SCCCHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,92,28,12
+    RTEXT           "",IDC_SCCDB,52,92,28,12,SS_CENTERIMAGE,WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_SCCSPIN,"msctls_updown32",UDS_ARROWKEYS,80,
+                    92,9,12
+    CONTROL         "OPLL",IDC_OPLLCHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,108,32,12
+    RTEXT           "",IDC_OPLLDB,52,108,28,12,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_OPLLSPIN,"msctls_updown32",UDS_ARROWKEYS,80,
+                    108,9,12
+    CONTROL         "OPL",IDC_OPLCHK,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    20,124,28,12
+    RTEXT           "",IDC_OPLDB,52,124,28,12,SS_CENTERIMAGE,
+                    WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_OPLSPIN,"msctls_updown32",UDS_ARROWKEYS,80,
+                    124,9,12
+    GROUPBOX        "Time",IDC_STATIC,104,64,136,84
+    LTEXT           "Playtime",IDC_STATIC,112,78,32,8
+    EDITTEXT        IDC_PLAYTIME,148,76,28,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "Looptime",IDC_STATIC,112,94,32,8
+    EDITTEXT        IDC_LOOPTIME,148,92,28,12,ES_RIGHT | ES_AUTOHSCROLL
+    CTEXT           "x",IDC_STATIC,180,94,8,8
+    EDITTEXT        IDC_LOOP,192,92,20,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Spin5",IDC_LOOPSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,212,92,9,12
+    LTEXT           "Fadetime",IDC_STATIC,112,110,32,8
+    EDITTEXT        IDC_FADETIME,148,108,28,12,ES_RIGHT | ES_AUTOHSCROLL
+    PUSHBUTTON      "&Now",IDC_PLAYTIME_NOW,180,76,24,12
+    PUSHBUTTON      "Searc&h",IDC_SEARCH,204,76,28,12
+    PUSHBUTTON      "Re&fresh Playlist",IDC_REFRESH,148,128,56,12
+    CONTROL         "Global settings",IDC_MULTI,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,8,160,60,10
+    PUSHBUTTON      "&Apply",IDC_UPDATE,76,156,32,16
+    PUSHBUTTON      "&Reset",IDC_RESET,108,156,32,16
+    PUSHBUTTON      "&Save...",IDC_SAVE,152,156,32,16
+    PUSHBUTTON      "&Remove",IDC_CLEAN,200,156,32,16
+    LTEXT           "",IDC_MGSTEXT,6,174,234,8
+END
+
+IDD_MIXER DIALOGEX 0, 0, 94, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "Slider1",IDC_MIXER_SLIDER,"msctls_trackbar32",
+                    TBS_AUTOTICKS | WS_TABSTOP,16,0,52,12
+    EDITTEXT        IDC_MIXER_VALUE,68,0,16,12,ES_RIGHT | ES_READONLY | 
+                    ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP,
+                    WS_EX_STATICEDGE
+    CONTROL         "Spin1",IDC_MIXER_SPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,84,0,9,12,WS_EX_STATICEDGE
+    CTEXT           "?",IDC_MIXER_TITLE,0,0,16,12,SS_CENTERIMAGE
+END
+
+IDD_EDIT2413 DIALOGEX 48, 48, 191, 199
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "EMU2413 TONE EDITOR"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "Tree1",IDC_VOICETREE,"SysTreeView32",TVS_HASBUTTONS | 
+                    TVS_HASLINES | TVS_LINESATROOT | TVS_DISABLEDRAGDROP | 
+                    TVS_SHOWSELALWAYS | TVS_FULLROWSELECT | WS_TABSTOP,0,0,
+                    88,164,WS_EX_CLIENTEDGE
+    PUSHBUTTON      "&Load...",IDC_LOAD,0,180,28,16
+    PUSHBUTTON      "&Save...",IDC_SAVE,28,180,28,16
+    PUSHBUTTON      "&Reset",IDC_RESET,60,180,28,16
+    EDITTEXT        IDC_TONEINFO,0,164,88,12,ES_READONLY | NOT WS_BORDER,
+                    WS_EX_STATICEDGE
+END
+
+IDD_SWITCH DIALOGEX 0, 0, 94, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CTEXT           "?",IDC_SWITCH_TITLE,0,0,16,12,SS_CENTERIMAGE
+    CONTROL         "ON",IDC_SWITCH_ON,"Button",BS_AUTORADIOBUTTON | 
+                    BS_VCENTER | BS_FLAT | WS_GROUP | WS_TABSTOP,20,0,24,12
+    CONTROL         "OFF",IDC_SWITCH_OFF,"Button",BS_AUTORADIOBUTTON | 
+                    BS_VCENTER | BS_FLAT | WS_TABSTOP,52,0,28,12
+END
+
+IDD_KSSDLG DIALOGEX 32, 32, 221, 145
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "File information"
+MENU IDR_MENU1
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    LTEXT           "File:",IDC_STATIC,12,12,14,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_FILENAME,30,12,179,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "Type:",IDC_STATIC,12,24,19,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TYPE,30,24,44,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "ID:",IDC_STATIC,78,24,11,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_ID,90,24,32,12,ES_AUTOHSCROLL | ES_READONLY | NOT 
+                    WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "Title:",IDC_STATIC,12,36,17,8,SS_CENTERIMAGE
+    EDITTEXT        IDC_TITLE,30,36,179,12,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EXTRA,12,69,199,20,ES_MULTILINE | ES_READONLY | 
+                    ES_WANTRETURN | NOT WS_BORDER | WS_VSCROLL | NOT 
+                    WS_TABSTOP,WS_EX_STATICEDGE
+    CONTROL         "Track the current song.",IDC_SYNC,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,130,90,10
+    GROUPBOX        "Header Information",IDC_STATIC,6,1,211,52
+    GROUPBOX        "Extra Information",IDC_STATIC,6,56,211,38
+    GROUPBOX        "Song",IDC_STATIC,6,98,211,27
+    CONTROL         "",IDC_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,37,107,144,12
+    RTEXT           "スタティック",IDC_SONG,15,109,16,8
+    PUSHBUTTON      "<",IDC_PREV,187,106,12,12
+    PUSHBUTTON      ">",IDC_NEXT,199,106,12,12
+END
+
+IDD_CFG_PAGE6 DIALOGEX 0, 0, 214, 125
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Sequencer"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "Time and Loop Settings",IDC_STATIC,5,5,199,43
+    LTEXT           "&Playtime",IDC_STATIC,12,18,27,8
+    EDITTEXT        IDC_PLAYTIME,48,18,36,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "&Fadetime",IDC_STATIC,12,30,33,8
+    EDITTEXT        IDC_FADETIME,48,30,36,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "&Loop number",IDC_STATIC,102,18,42,8
+    EDITTEXT        IDC_LOOPNUM,150,18,22,12,ES_RIGHT | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "Spin1",IDC_LOOPSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,174,18,11,11
+    CONTROL         "&Detect silence",IDC_SILENT_ENABLE,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,90,30,60,10
+    EDITTEXT        IDC_SILENT,150,30,22,12,ES_RIGHT | ES_READONLY | 
+                    ES_NUMBER
+    CONTROL         "",IDC_SILENTSPIN,"msctls_updown32",UDS_SETBUDDYINT | 
+                    UDS_AUTOBUDDY | UDS_ARROWKEYS,174,30,11,11
+    LTEXT           "secs",IDC_STATIC,186,30,15,8
+    GROUPBOX        "Playtime Search",IDC_STATIC,6,54,199,30
+    CONTROL         "Disable",IDC_TDMODE0,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,12,66,38,13
+    CONTROL         "Implicit",IDC_TDMODE1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,54,66,36,13
+    CONTROL         "Explicit",IDC_TDMODE2,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,96,66,38,12
+    CONTROL         "Search Only",IDC_TDMODE3,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,138,66,58,10
+    GROUPBOX        "Search Level",IDC_STATIC,6,90,198,30
+    CONTROL         "Quick",IDC_TDLEVEL0,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,12,102,35,14
+    CONTROL         "Full",IDC_TDLEVEL1,"Button",BS_AUTORADIOBUTTON | 
+                    WS_TABSTOP,54,102,35,13
+END
+
+IDD_PANPOT DIALOGEX 0, 0, 67, 11
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    CONTROL         "Slider1",IDC_SLIDER,"msctls_trackbar32",TBS_AUTOTICKS | 
+                    WS_TABSTOP,30,0,35,11,WS_EX_STATICEDGE
+    CONTROL         "?",IDC_TITLE,"Button",BS_AUTOCHECKBOX | BS_PUSHLIKE | 
+                    WS_TABSTOP,0,0,30,11,WS_EX_STATICEDGE
+END
+
+IDD_PANDLG DIALOGEX 0, 0, 69, 185
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "OPLL-PAN"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,5,165,30,15
+    PUSHBUTTON      "&Reset",IDC_RESET,35,165,30,15
+END
+
+IDD_CFG_PAGE7 DIALOGEX 0, 0, 209, 135
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | 
+    WS_SYSMENU
+CAPTION "Filter"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    COMBOBOX        IDC_PSG_CUTOFF,140,21,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_SCC_CUTOFF,140,42,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_OPLL_CUTOFF,140,63,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    COMBOBOX        IDC_OPL_CUTOFF,140,84,44,88,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    LTEXT           "Hz",IDC_STATIC,186,24,9,8
+    LTEXT           "Hz",IDC_STATIC,186,45,9,8
+    LTEXT           "Hz",IDC_STATIC,186,66,9,8
+    LTEXT           "Hz",IDC_STATIC,186,87,9,8
+    LTEXT           "&R",IDC_STATIC,25,58,8,8
+    EDITTEXT        IDC_R,35,55,27,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "&C",IDC_STATIC,25,77,8,8
+    EDITTEXT        IDC_C,35,74,27,14,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "OM",IDC_STATIC,67,58,13,8
+    LTEXT           "nF",IDC_STATIC,67,77,12,8
+    LTEXT           "These settings effect all sound devices.",IDC_STATIC,15,
+                    100,80,20
+    CONTROL         "Use &DC filter",IDC_ENABLE_DCF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,20,61,10
+    CONTROL         "&Use RC filter",IDC_ENABLE_RCF,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,38,61,10
+    GROUPBOX        "&Analog Filter",IDC_STATIC,5,5,100,120
+    LTEXT           "&PSG",IDC_STATIC,120,24,14,8
+    LTEXT           "&SCC",IDC_STATIC,120,45,14,8
+    LTEXT           "&OPLL",IDC_STATIC,120,66,16,8
+    LTEXT           "OP&L",IDC_STATIC,120,87,13,8
+    GROUPBOX        "Digital &FIR low-pass",IDC_STATIC,110,5,90,120
+END
+
+IDD_CFG_PAGE8 DIALOGEX 0, 0, 235, 161
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Misc"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    GROUPBOX        "MoonBlaster Settings",IDC_STATIC,5,5,225,127
+    LTEXT           "Sound Device",IDC_STATIC,15,21,53,8
+    CONTROL         "MSX-AUDIO",IDC_MBM_MODE0,"Button",BS_AUTORADIOBUTTON,74,
+                    20,56,10
+    CONTROL         "MSX-MUSIC",IDC_MBM_MODE1,"Button",BS_AUTORADIOBUTTON,
+                    130,20,60,10
+    CONTROL         "Both",IDC_MBM_MODE2,"Button",BS_AUTORADIOBUTTON,190,20,
+                    30,10
+    LTEXT           "Pseudo Stereo",IDC_STATIC,15,37,51,8
+    CONTROL         "Enable",IDC_ENABLE_STEREO,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,75,36,49,10
+    LTEXT           "VSYNC Mode",IDC_STATIC,15,53,45,8
+    CONTROL         "PAL(50Hz)",IDC_SYNC0,"Button",BS_AUTORADIOBUTTON,74,52,
+                    47,10
+    CONTROL         "NTSC(60Hz)",IDC_SYNC1,"Button",BS_AUTORADIOBUTTON,130,
+                    52,52,10
+    EDITTEXT        IDC_MBKPATH,75,67,145,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "&MBK Path...",IDC_MBKBTN,15,67,55,14
+    LTEXT           "Default MBK name",IDC_STATIC,15,90,56,8
+    EDITTEXT        IDC_MBKDUMMY,75,85,40,14,ES_AUTOHSCROLL
+    LTEXT           "The default MBK file is loaded when there is no corresponding MBK in the same folder of the playing MBM file.",
+                    IDC_STATIC,18,106,204,18
+    GROUPBOX        "KSS Settings",IDC_STATIC,6,132,222,26
+    CONTROL         "Expand KSS embedded playlist.",IDC_EXPAND_INFO,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,12,144,116,10
+END
+
+IDD_CFG_PAGE4 DIALOGEX 0, 0, 234, 145
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_DISABLED | WS_CAPTION
+CAPTION "Driver"
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+    PUSHBUTTON      "&MGSDRV",IDC_SET_MGSDRV,5,9,50,12
+    EDITTEXT        IDC_MGSDRV_PATH,60,10,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "K&INROU5",IDC_SET_KINROU,5,28,50,12
+    EDITTEXT        IDC_KINROU_PATH,60,29,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "M&PK(V1.06)",IDC_SET_MPK106,5,47,50,12
+    EDITTEXT        IDC_MPK106_PATH,60,48,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "MP&K(V1.03)",IDC_SET_MPK103,5,66,50,12
+    EDITTEXT        IDC_MPK103_PATH,60,67,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "&OPX4KSS",IDC_SET_OPXDRV,5,85,50,12
+    EDITTEXT        IDC_OPXDRV_PATH,60,86,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "&FMPAC.ROM",IDC_SET_FMBIOS,5,104,50,12
+    EDITTEXT        IDC_FMBIOS_PATH,60,105,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    PUSHBUTTON      "Moon&Blaster",IDC_SET_MBMDRV,5,123,50,12
+    EDITTEXT        IDC_MBMDRV_PATH,60,124,170,12,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 227
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 158
+    END
+
+    IDD_CFG_PAGE1, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 123
+    END
+
+    IDD_CFG_PAGE2, DIALOG
+    BEGIN
+        RIGHTMARGIN, 165
+        BOTTOMMARGIN, 167
+    END
+
+    IDD_CFG_PAGE3, DIALOG
+    BEGIN
+        RIGHTMARGIN, 213
+        BOTTOMMARGIN, 145
+    END
+
+    IDD_CFG_PAGE5, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 233
+        TOPMARGIN, 3
+        BOTTOMMARGIN, 168
+    END
+
+    IDD_PLSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 239
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_MIXER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 93
+        BOTTOMMARGIN, 15
+    END
+
+    IDD_EDIT2413, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 184
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 192
+    END
+
+    IDD_SWITCH, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 87
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 9
+    END
+
+    IDD_KSSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 5
+        RIGHTMARGIN, 216
+        TOPMARGIN, 5
+        BOTTOMMARGIN, 140
+    END
+
+    IDD_CFG_PAGE6, DIALOG
+    BEGIN
+        RIGHTMARGIN, 193
+        BOTTOMMARGIN, 117
+    END
+
+    IDD_PANPOT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 60
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 4
+    END
+
+    IDD_PANDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 62
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 178
+    END
+
+    IDD_CFG_PAGE7, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 202
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 128
+    END
+
+    IDD_CFG_PAGE8, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 154
+    END
+
+    IDD_CFG_PAGE4, DIALOG
+    BEGIN
+        RIGHTMARGIN, 219
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_CFG_PAGE7 DLGINIT
+BEGIN
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_PSG_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_SCC_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_OPLL_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3031, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3032, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3033, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3034, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3035, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3036, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3037, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3038, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 5, 0
+0x3039, 0x3030, "\000" 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3031, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3131, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3231, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3331, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3431, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3531, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3631, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3731, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3831, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3931, 0x3030, 0x0030, 
+    IDC_OPL_CUTOFF, 0x403, 6, 0
+0x3032, 0x3030, 0x0030, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU 
+BEGIN
+    POPUP "&View"
+    BEGIN
+        MENUITEM "Channel &Mask",               176
+        MENUITEM "&Tone Editor",                IDM_VEDIT
+        MENUITEM "&Lyrics Window",              40006
+        MENUITEM "&Configuration",              IDM_CONFIG
+    END
+END
+
+#endif    // 英語 (米国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
