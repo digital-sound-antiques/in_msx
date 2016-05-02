@@ -1,5 +1,15 @@
 # in_msx.dll
-MSXplug for Winamp 5
+MSX sound player plugin (a.k.a MSXplug) for Winamp 5.
+It supports the following sound formats.
+
+|EXT|Description|
+|---|---|
+|.kss|Sound data from varius systems|
+|.mgs|MGSDRV data|
+|.bgm|MuSICA or Kinrou5 data|
+|.mbm|MoonBlaster data|
+|.opx|OPLLDriver data|
+|.mpk|MPK data|
 
 # How to install
 
