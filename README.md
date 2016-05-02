@@ -11,6 +11,8 @@ It supports the following sound formats.
 |.opx|OPLLDriver data|
 |.mpk|MPK data|
 
+Note: zip-compressed `.kss` files are not supported.
+
 # How to install
 
 1. Download in_msx.dll and in_msx.ini from our [repository](https://github.com/digital-sound-antiques/in_msx/tree/master/dist).
