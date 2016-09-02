@@ -4,7 +4,7 @@
 #include "winamp/in2.h"
 
 #define PLUGIN_NAME "in_msx"
-#define PLUGIN_VERSION "0.36"
+#define PLUGIN_VERSION "0.37"
 #define ILL_NAME "in_msx.ill"
 
 #define IN_MSX_ABOUT \
