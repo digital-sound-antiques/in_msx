@@ -20,6 +20,15 @@ static BOOL CALLBACK dlgProc(HWND hDlg, UINT uMsg, WPARAM wParam, LPARAM lParam)
     }
     break ;
 
+  case WM_DESTROY:
+	if (config->dialog)
+	{
+	  ret = config->dlgProc(hDlg, uMsg, wParam, lParam);
+	  CONFIG_dialog_end(config);
+	  return ret;
+	}
+	break;
+
   case WM_SYSCOMMAND:
     if(wParam==SC_CLOSE)
     {
