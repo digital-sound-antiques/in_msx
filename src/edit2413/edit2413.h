@@ -1,7 +1,7 @@
 #ifndef _EDIT2413_H_
 #define _EDIT2413_H_
 #include <windows.h>
-#include <emu2413.h>
+#include "emu2413/emu2413.h"
 
 enum { TL=0, FB, EG, ML, AR, DR, SL, RR, KR, KL, AM, PM, WF, ENDPARAM } ;
 
