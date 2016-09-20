@@ -4,11 +4,11 @@
 #include "winamp/in2.h"
 
 #define PLUGIN_NAME "in_msx"
-#define PLUGIN_VERSION "0.37"
+#define PLUGIN_VERSION "1.1.0"
 #define ILL_NAME "in_msx.ill"
 
 #define IN_MSX_ABOUT \
-"MSXplug version " PLUGIN_VERSION " (" __DATE__ ")\r\n" \
+"MSXplug version " PLUGIN_VERSION "\r\n" \
 "(c) 1999-2016 Digital Sound Antiques\r\n" \
 "http://www.github.io/digital-sound-antiques\r\n" \
 "\r\n" \
