@@ -35,7 +35,8 @@ $ cd in_msx
 $ mkdir build
 $ cd build
 $ cmake ..
+$ cmake --build . --config Release
 ```
 
-You can open `in_msx.vcxproj` with Visual Studio. To obtain `in_msx.dll`, just build `in_msx` project.
-If you have some error to find MSVC compiler from `cmake ..`, try CMake 3.6 or greater.
+You can also open `in_msx.vcxproj` with Visual Studio. To obtain `in_msx.dll`, just build `in_msx` project.
+If you have some error to find MSVC compiler, try CMake 3.6 or greater.
