@@ -15,7 +15,7 @@ Note: zip-compressed `.kss` files are not supported.
 
 # How to install
 
-1. Download in_msx.dll and in_msx.ini from our [repository](https://github.com/digital-sound-antiques/in_msx/tree/master/dist).
+1. Download in_msx.dll and in_msx.ini from our [repository](https://github.com/digital-sound-antiques/in_msx/releases).
 2. Copy the both in_msx.dll and in_msx.ini to Winamp 5's plugin directory.
 3. Restart the Winamp.
 
