@@ -4,18 +4,19 @@
 #include "winamp/in2.h"
 
 #define PLUGIN_NAME "in_msx"
-#define PLUGIN_VERSION "1.1.0"
-#define ILL_NAME "in_msx.ill"
+#define PLUGIN_VERSION "1.2.0"
 
-#define IN_MSX_ABOUT \
-"MSXplug version " PLUGIN_VERSION "\r\n" \
-"(c) 1999-2016 Digital Sound Antiques\r\n" \
-"http://www.github.io/digital-sound-antiques\r\n" \
-"\r\n" \
-"This software is built with following software.\r\n" \
-"\r\n" \
-"KMZ80 written by Mamiya\r\n" \
-"MGSDRV (c) GIGAMIX/Ain\r\n" \
-"Kinrou5 (c) Keiichi Kuroda\r\n"
+#define IN_MSX_ABOUT                                    \
+  "MSXplug version " PLUGIN_VERSION "\r\n"              \
+  "(C) 1999-2019 Digital Sound Antiques\r\n"            \
+  "http://www.github.io/digital-sound-antiques\r\n"     \
+  "\r\n"                                                \
+  "This software is built with following software.\r\n" \
+  "\r\n"                                                \
+  "KMZ80 by Mamiya\r\n"                                 \
+  "MGSDRV by GIGAMIX/Ain\r\n"                           \
+  "Kinrou5 by Keiichi Kuroda\r\n"                       \
+  "MPK by K-KAZ\r\n"                                    \
+  "OPLLDriver by Ring\r\n"
 
 #endif
