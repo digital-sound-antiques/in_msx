@@ -20,10 +20,11 @@ Note: zip-compressed `.kss` files are not supported.
 3. Restart the Winamp.
 
 ## Note
-If your Winamp is installed to a system folder like `C:\Program Files\` on Windows 8 or later, settings modified from MSXplug's UI  can not be persisted. To solve this problem, install Winamp to user's private folder instead of system folders. Or change security settings of in_msx.ini file
-    - open security page on in_msx.ini properties sheet, select `Users` and then give `write` permission.  
-    
-      ![](doc/image/permission.png)
+If your Winamp is installed to a system folder like `C:\Program Files\` on Windows 8 or later, settings modified from MSXplug's UI  can not be persisted. To solve this problem, install Winamp to user's private folder instead of system folders. Or change security settings of in_msx.ini file:
+
+- open security page on in_msx.ini properties sheet, select `Users` and then give `write` permission. 
+
+  ![](doc/image/permission.png)
 
 # How to build
 
