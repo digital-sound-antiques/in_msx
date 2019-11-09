@@ -19,6 +19,14 @@ Note: zip-compressed `.kss` files are not supported.
 2. Copy the both in_msx.dll and in_msx.ini to Winamp 5's plugin directory.
 3. Restart the Winamp.
 
+# Note
+If Winamp installed to a system folder like `C:\Program Files\` on Windows 8 or later, settings modified from MSXplug's UI  can not be persisted. To solve this problem, there are two ways:
+1. Install Winamp to user's private folder.
+2. Change security settings of in_msx.ini file
+    - open security page on in_msx.ini properties sheet, select `Users` and then give `write` permission.  
+    
+      ![](doc/image/permission.png)
+
 # How to build
 
 Install [cmake][] 3.4 or later, [git for windows][] and [Visual Studio] 2015 or later.
