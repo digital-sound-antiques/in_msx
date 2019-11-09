@@ -1,5 +1,5 @@
 # in_msx.dll
-MSX sound player plugin (a.k.a MSXplug) for Winamp 5.
+in_msx.dll aka MSXplug is a MSX sound player plugin for Winamp 5.
 It supports the following sound formats.
 
 |EXT|Description|
@@ -15,14 +15,12 @@ Note: zip-compressed `.kss` files are not supported.
 
 # How to install
 
-1. Download in_msx.dll and in_msx.ini from our [repository](https://github.com/digital-sound-antiques/in_msx/releases).
-2. Copy the both in_msx.dll and in_msx.ini to Winamp 5's plugin directory.
+1. Download in_msx.zip from the [release page](https://github.com/digital-sound-antiques/in_msx/releases).
+2. Extract zip file and copy both in_msx.dll and in_msx.ini to Winamp 5's plugin directory.
 3. Restart the Winamp.
 
-# Note
-If Winamp installed to a system folder like `C:\Program Files\` on Windows 8 or later, settings modified from MSXplug's UI  can not be persisted. To solve this problem, there are two ways:
-1. Install Winamp to user's private folder.
-2. Change security settings of in_msx.ini file
+## Note
+If your Winamp is installed to a system folder like `C:\Program Files\` on Windows 8 or later, settings modified from MSXplug's UI  can not be persisted. To solve this problem, install Winamp to user's private folder instead of system folders. Or change security settings of in_msx.ini file
     - open security page on in_msx.ini properties sheet, select `Users` and then give `write` permission.  
     
       ![](doc/image/permission.png)
@@ -47,4 +45,4 @@ $ cmake --build . --config Release
 ```
 
 You can also open `in_msx.vcxproj` with Visual Studio. To obtain `in_msx.dll`, just build `in_msx` project.
-If you have some error to find MSVC compiler, try CMake 3.6 or greater.
+If you have some error to find MSVC compiler, try CMake 3.6 or later.
