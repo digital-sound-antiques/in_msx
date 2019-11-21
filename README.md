@@ -25,6 +25,36 @@ If your Winamp is installed to a system folder like `C:\Program Files\` on Windo
 - open security page on in_msx.ini properties sheet, select `Users` and then give `write` permission. 
 
   ![](doc/image/permission.png)
+  
+# User Interface
+## File Information Dialog
+Right click on the playlist entry and select `View file info...` from the context menu.
+
+![](doc/image/winamp.png)
+
+Then, File Information dialog will appear.
+
+![](doc/image/file_info.png)
+
+from View menu, you can access channel mask, tone editor, lyrics and configuration dialog.
+
+![](doc/image/file_info_menu.png)
+
+## Channel Mask Dialog
+All channels can be muted separately. Changes are immediately applied on playing music.
+
+![](doc/image/mask.png)
+
+## Configuration Dialog
+
+![](doc/image/mixer.png)
+
+You can also access this dialog by pressing F12 after in_msx plugin is activated - if no msx song is played, the plugin is still inactive thus F12 does no effect.
+
+## Bonus - Retro Filter
+If you prefer a retro low-pass like MSX turbo-R or FMPAC, try R=3870, C=15 and turn RC filter check-box on.
+
+![](doc/image/filter.png)
 
 # How to build
 
