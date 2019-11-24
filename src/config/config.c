@@ -366,6 +366,7 @@ void CONFIG_delete(CONFIG *config)
 
     CONFIG_dialog_end(config) ;
     if(config->pandlg) PANDLG_delete(config->pandlg);
+    DeleteCriticalSection(&config->cso);
     free(config) ;
   }
 }
