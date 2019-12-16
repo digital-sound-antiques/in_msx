@@ -1,4 +1,5 @@
 cmake_minimum_required(VERSION 3.4)
+project(MSXplug)
 
 set(CMAKE_C_FLAGS "/Ox /W3 /wd4996")
 set(configurations
@@ -24,8 +25,6 @@ include_directories(
 	modules/libkss/src 
 	modules/libkss/modules/ 
 )
-
-# find_library(WIN32_COMCTRL comctl32.lib)
 
 file(GLOB SOURCES src/*.c src/**/*.c)
 

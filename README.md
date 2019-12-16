@@ -71,7 +71,7 @@ $ git clone --recursive https://github.com/digital-sound-antiques/in_msx.git
 $ cd in_msx
 $ mkdir build
 $ cd build
-$ cmake ..
+$ cmake -A Win32 ..
 $ cmake --build . --config Release
 ```
 
