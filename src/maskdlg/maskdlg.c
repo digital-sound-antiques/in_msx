@@ -62,7 +62,7 @@ static void update(MASKDLG *dlg, BOOL b)
     update_t(dlg,IDC_OPL_HH,EDSC_OPL,OPL_MASK_HH);
     update_t(dlg,IDC_OPL_TOM,EDSC_OPL,OPL_MASK_TOM);
     update_t(dlg,IDC_OPL_CYM,EDSC_OPL,OPL_MASK_CYM);
-    update_t(dlg,IDC_OPL_PCM,EDSC_OPL,OPL_MASK_PCM);
+    update_t(dlg,IDC_OPL_PCM,EDSC_OPL,OPL_MASK_ADPCM);
     dlg->cfg->mask_update = 1;
   }
   else {
@@ -103,7 +103,7 @@ static void update(MASKDLG *dlg, BOOL b)
     update_f(dlg,IDC_OPL_HH,EDSC_OPL,OPL_MASK_HH);
     update_f(dlg,IDC_OPL_TOM,EDSC_OPL,OPL_MASK_TOM);
     update_f(dlg,IDC_OPL_CYM,EDSC_OPL,OPL_MASK_CYM);
-    update_f(dlg,IDC_OPL_PCM,EDSC_OPL,OPL_MASK_PCM);
+    update_f(dlg,IDC_OPL_PCM,EDSC_OPL,OPL_MASK_ADPCM);
   }
 }
 

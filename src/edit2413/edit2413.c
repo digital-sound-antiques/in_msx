@@ -28,7 +28,7 @@ static int read_patch_param(OPLL_PATCH *patch, int param)
   case KL: return patch->KL ;
   case AM: return patch->AM ;
   case PM: return patch->PM ;
-  case WF: return patch->WF ;
+  case WS: return patch->WS ;
   default: return 0 ;
   }
 }
@@ -49,7 +49,7 @@ static void write_patch_param(OPLL_PATCH *patch, int param, int value)
   case KL: patch->KL = value ; break ;
   case AM: patch->AM = value ; break ;
   case PM: patch->PM = value ; break ;
-  case WF: patch->WF = value ; break ;
+  case WS: patch->WS = value ; break ;
   default: break ;
   }
 }
@@ -397,7 +397,7 @@ void EDIT2413_open(EDIT2413 *edit2413, HWND hwndParent, HINSTANCE hInst)
       GetClientRect(GetDlgItem(edit2413->hMain,IDC_VOICETREE), &rect) ;
       x = rect.right + 8 ;
 
-      for(i=TL;i<=WF;i++)
+      for(i=TL;i<=WS;i++)
       {
         edit2413->hParam[i] = CreateMixerControl(hInst, edit2413->hMain, LABEL[i], 0,PARAMAX[i]) ;
         SetWindowPos(edit2413->hParam[i],NULL,x,y,0,0,SWP_NOSIZE|SWP_NOZORDER) ; 
