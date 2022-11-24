@@ -14,6 +14,8 @@
 #include "sstream.h"
 #define BLK_SIZE (32)
 
+int tolower(int);
+
 static int is_sjis_prefix(int c)
 {
   if((0x81<=c&&c<=0x9F)||(0xE0<=c&&c<=0xFC)) return 1 ;

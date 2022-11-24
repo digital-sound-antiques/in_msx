@@ -6,7 +6,7 @@
 In_Module mod = 
 {
 	IN_VER, // module type
-	"MSXplug "PLUGIN_VERSION, // description of module, with version string
+	"MSXplug "PLUGIN_VERSION" ("PLUGIN_BUILD_DATE")", // description of module, with version string
 	0,	/* hMainWindow (filled in by winamp after init() ) */
 	0,  /* hDllInstance ( Also filled in by winamp) */
 	"" // FileExtensions handled by this DLL

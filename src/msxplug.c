@@ -18,7 +18,7 @@
 /* Logfile */
 static char mod_path[MAX_PATH] ; /* where in_msx.dll wakes up. */
 static FILE *logfp;
-#define LOGWRITE(S,V) (logfp?fprintf(logfp,S,V),fflush(logfp):0)
+#define LOGWRITE(...) (logfp ? fprintf(logfp, __VA_ARGS__), fflush(logfp) : 0)
 
 /* User Interfaces */
 #include "config/config.h"
@@ -199,7 +199,7 @@ void GrabWinamp(HWND hWinamp)
 		dwThreadId = GetWindowThreadProcessId(hMainWindow, NULL);
 		hHookKeyboard = SetWindowsHookEx(WH_KEYBOARD, KeyboardProc, NULL, dwThreadId);
     hHookCallWndProc = SetWindowsHookEx(WH_CALLWNDPROC, CallWndProc, NULL, dwThreadId) ;
-    LOGWRITE("Winamp's window is grabbed.\n",0) ;
+    LOGWRITE("Winamp's window is grabbed.\n") ;
   }
 }
 
@@ -207,54 +207,54 @@ void UngrabWinamp(void)
 {
   if(hHookKeyboard) UnhookWindowsHookEx(hHookKeyboard) ;
   if(hHookCallWndProc) UnhookWindowsHookEx(hHookCallWndProc) ;
-  LOGWRITE("Winamp's window is released.\n",0) ;
+  LOGWRITE("Winamp's window is released.\n") ;
 }
 
 static void load_drivers()
 {
-  LOGWRITE(CONFIG_get_str(cfg,"MBMDRV"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"MBMDRV"));
   if(!cfg->mbmdrv_loaded&&CONFIG_get_int(cfg,"ENABLE_MBM")&&KSS_load_mbmdrv(CONFIG_get_str(cfg,"MBMDRV")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"MBMDRV"));
   }
   cfg->mbmdrv_loaded = 1;
 
-  LOGWRITE(CONFIG_get_str(cfg,"MGSDRV"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"MGSDRV"));
   if(!cfg->mgsdrv_loaded&&CONFIG_get_int(cfg,"ENABLE_MGS")&&KSS_load_mgsdrv(CONFIG_get_str(cfg,"MGSDRV")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"MGSDRV"));
   }
   cfg->mgsdrv_loaded = 1 ;
 
-  LOGWRITE(CONFIG_get_str(cfg,"KINROU"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"KINROU"));
   if(!cfg->kinrou_loaded&&CONFIG_get_int(cfg,"ENABLE_BGM")&&KSS_load_kinrou(CONFIG_get_str(cfg,"KINROU")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"KINROU"));
   }
   cfg->kinrou_loaded = 1 ;
 
-  LOGWRITE(CONFIG_get_str(cfg,"OPXDRV"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"OPXDRV"));
   if(!cfg->opxdrv_loaded&&CONFIG_get_int(cfg,"ENABLE_OPX")&&KSS_load_opxdrv(CONFIG_get_str(cfg,"OPXDRV")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"OPXDRV"));
   }
   cfg->opxdrv_loaded = 1 ;
 
-  LOGWRITE(CONFIG_get_str(cfg,"FMBIOS"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"FMBIOS"));
   if(!cfg->fmbios_loaded&&CONFIG_get_int(cfg,"ENABLE_OPX")&&KSS_load_fmbios(CONFIG_get_str(cfg,"FMBIOS")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"FMBIOS"));
   }
   cfg->fmbios_loaded = 1 ;
 
-  LOGWRITE(CONFIG_get_str(cfg,"MPK106"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"MPK106"));
   if(!cfg->mpk106_loaded&&CONFIG_get_int(cfg,"ENABLE_MPK")&&KSS_load_mpk106(CONFIG_get_str(cfg,"MPK106")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"MPK106")) ;
   }
   cfg->mpk106_loaded = 1 ;
 
-  LOGWRITE(CONFIG_get_str(cfg,"MPK103"),0);
+  LOGWRITE(CONFIG_get_str(cfg,"MPK103"));
   if(!cfg->mpk103_loaded&&CONFIG_get_int(cfg,"ENABLE_MPK")&&KSS_load_mpk103(CONFIG_get_str(cfg,"MPK103")))
   {
     LOGWRITE("File not found : %s\n", CONFIG_get_str(cfg,"MPK103"));
@@ -378,31 +378,31 @@ void MSXPLUG_init()
   CONFIG_load(cfg) ;
   cfg->hYM2413 = (HICON)LoadImage(mod.hDllInstance,MAKEINTRESOURCE(IDB_YM2413),IMAGE_BITMAP,57,23,LR_DEFAULTCOLOR);
 
-  LOGWRITE("Configuration finished.\n", 0) ;
+  LOGWRITE("Configuration finished.\n") ;
 
   edit2413 = EDIT2413_new() ;
-  LOGWRITE("Voice Editor dialog is initialized.\n",0);
+  LOGWRITE("Voice Editor dialog is initialized.\n");
   kssdlg = KSSDLG_new() ;
-  LOGWRITE("KSS Information dialog is initialized.\n",0);
+  LOGWRITE("KSS Information dialog is initialized.\n");
   plsdlg = PLSDLG_new() ;
-  LOGWRITE("PLS Editor dialog is initialized.\n",0);
+  LOGWRITE("PLS Editor dialog is initialized.\n");
   optdlg = OPTDLG_new() ;
-  LOGWRITE("OPT dialog is initialized.\n",0);
+  LOGWRITE("OPT dialog is initialized.\n");
   maskdlg = MASKDLG_new(cfg);
-  LOGWRITE("MASK dialog is initialized.\n",0);
+  LOGWRITE("MASK dialog is initialized.\n");
   
   load_drivers() ;
-  LOGWRITE("Some drivers have been loaded.",0);
+  LOGWRITE("Some drivers have been loaded.");
 
   mod.FileExtensions = cfg->extensions ;
-  LOGWRITE("Finished init().\n", 0);
+  LOGWRITE("Finished init().\n");
 
   if(CONFIG_get_int(cfg,"OPENSETUP"))
   {
-    LOGWRITE("This is the first time to use " PLUGIN_NAME ".\n", 0);
+    LOGWRITE("This is the first time to use " PLUGIN_NAME ".\n");
     MSXPLUG_config(NULL);
     CONFIG_set_int(cfg,"OPENSETUP",0) ;
-    LOGWRITE("Config dialog is opened.\n", 0);
+    LOGWRITE("Config dialog is opened.\n");
   }
 }
 
@@ -412,20 +412,20 @@ void MSXPLUG_quit()
   {
     EDIT2413_save(edit2413,cfg->ill_path) ;
     EDIT2413_delete(edit2413) ;
-    LOGWRITE("EDIT2413DLG was deleted.\n",0);
+    LOGWRITE("EDIT2413DLG was deleted.\n");
   }
 
   PLSDLG_delete(plsdlg) ;
-  LOGWRITE("PLSDLG was deleted.\n",0);
+  LOGWRITE("PLSDLG was deleted.\n");
 
   KSSDLG_delete(kssdlg) ;
-  LOGWRITE("KSSDLG was deleted.\n",0);
+  LOGWRITE("KSSDLG was deleted.\n");
 
   OPTDLG_delete(optdlg) ;  
-  LOGWRITE("OPT dialog was deleted.\n",0);
+  LOGWRITE("OPT dialog was deleted.\n");
 
   MASKDLG_delete(maskdlg);
-  LOGWRITE("OPT dialog was deleted.\n",0);
+  LOGWRITE("OPT dialog was deleted.\n");
 
   if(current_kss)
   {
@@ -433,19 +433,19 @@ void MSXPLUG_quit()
     KSS_delete(current_kss) ;
     current_kss = NULL;
     LeaveCriticalSection(&cso) ;
-    LOGWRITE("Current KSS data was deleted.\n",0);
+    LOGWRITE("Current KSS data was deleted.\n");
   }
 
   DeleteCriticalSection(&cso) ;
 
   CONFIG_save(cfg) ;
-  LOGWRITE("Configuration Saved.\n",0);
+  LOGWRITE("Configuration Saved.\n");
 
   CONFIG_delete(cfg) ;
-  LOGWRITE("Configuration Deleted.\n",0);
+  LOGWRITE("Configuration Deleted.\n");
 
   UngrabWinamp() ;
-  LOGWRITE("Ungrab Winamp.\n",0);
+  LOGWRITE("Ungrab Winamp.\n");
 
   if(logfp) fclose(logfp);
 
